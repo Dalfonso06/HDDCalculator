@@ -2,7 +2,7 @@ import math
 
 # 2 --------------- Path Parameters ---------------
 class Curvature:
-    """Class for Curvature Section 2.3 A and B"""
+    """Class for Curvature Section 2.3 A and B."""
 
     def __init__(self, horizontal_curve: bool, radius_of_curve: float, length_of_curve: float):
         """Instance method for curvature function (horizontal or compound)

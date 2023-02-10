@@ -1,6 +1,7 @@
 import elevations
 
 class DepthAndHeights:
+    """Depth and Heights Section 2.5."""
 
     def __init__(self, elevations: elevations.Elevations, outside_diameter: float):
         """Create an instance of the elevations class to use in H calculations.

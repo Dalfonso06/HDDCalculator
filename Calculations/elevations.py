@@ -1,5 +1,5 @@
 class Elevations:
-    """Class to store elevation measurements."""
+    """Class to store elevation measurements Section 2.4."""
 
     def __init__(self, pointA: float, pointD: float, pointBC: float, bottom_of_river: float, water_table: float, highest_elevation: float):
         """Initialization method for measurements.
