@@ -4,8 +4,7 @@ class PipeParameters:
     """Class for Pipe Parameters Section 1"""
 
     # Minimum wall thickness (1.3)
-    @staticmethod
-    def t(outside_diameter, dimension_ratio):
+    def t(self, outside_diameter, dimension_ratio):
         """Calculate minimum wall thickness.
 
         Args:
@@ -18,8 +17,7 @@ class PipeParameters:
         return outside_diameter / dimension_ratio
 
     # Pipe External Area (1.5.1)
-    @staticmethod
-    def AOS(outside_diameter):
+    def AOS(self, outside_diameter):
         """Calculate the pipe external area.
 
         Args:
@@ -32,8 +30,7 @@ class PipeParameters:
         return pi * (outside_diameter**2) / 4
 
     # Pipe Internal Area (1.5.2)
-    @staticmethod
-    def AIS(inside_diameter):
+    def AIS(self, inside_diameter):
         """Calculate the pipe internal area.
 
         Args:
@@ -46,8 +43,7 @@ class PipeParameters:
         return pi * (inside_diameter**2) / 4
 
     # Pipe Cross-section Area (1.5.3)
-    @staticmethod
-    def ACS(outside_diameter, inside_diameter):
+    def ACS(self, outside_diameter, inside_diameter):
         """Calculate the pipe cross-section area.
 
         Args:
@@ -57,11 +53,10 @@ class PipeParameters:
         Returns:
             float: Pipe cross-section area in square insches.
         """
-        return PipeParameters.AOS(outside_diameter) - PipeParameters.AIS(inside_diameter)
+        return self.AOS(outside_diameter) - self.AIS(inside_diameter)
 
     # Allowable Tensile Load
-    @staticmethod
-    def ATL(safe_pull_stress, outside_diameter, inside_diameter):
+    def ATL(self, safe_pull_stress, outside_diameter, inside_diameter):
         """Calculate the allowable tensile load.
 
         Args:
@@ -72,4 +67,5 @@ class PipeParameters:
         Returns:
             float: Allowable tensile load in pound force (Lbf)
         """
-        return safe_pull_stress * PipeParameters.ACS(outside_diameter, inside_diameter)
+        return safe_pull_stress * self.ACS(outside_diameter, inside_diameter)
+

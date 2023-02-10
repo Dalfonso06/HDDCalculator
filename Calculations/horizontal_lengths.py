@@ -3,8 +3,7 @@ import math
 class HorizontalLenghts:
     """Calculates the horizontal lengths (H_Length) Section 2.6."""
 
-    @staticmethod
-    def length_of_path(lengths: list):
+    def length_of_path(self, lengths: list):
         """Calculate the total length of H_Length.
 
         Args:
@@ -15,8 +14,7 @@ class HorizontalLenghts:
         """
         return math.fsum(lengths)
 
-    @staticmethod
-    def borehole_diameter(outside_diameter: float):
+    def borehole_diameter(self, outside_diameter: float):
         """Calculates the D hole or borehole diameter.
 
         Args:
